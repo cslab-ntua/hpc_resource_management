@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
+  - title: "Team"
+    url: /team/
+  - title: "Projects"
+    url: /projects/
+  - title: "Contact"
+    url: /contact/
