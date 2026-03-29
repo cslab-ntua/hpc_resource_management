@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Team"
-permalink: /hpc_resource_management/team/
+permalink: /team/
 ---
 
 {% for member in site.team %}
