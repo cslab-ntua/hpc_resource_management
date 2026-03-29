@@ -1,6 +1,9 @@
-title: "My Research Team"
-name: "My Research Team"
+title: "HPC Resource Management Team"
+name: "HPC Resource Management Team"
 description: "Official website of our research group"
+
+url: "https://cslab-ntua.github.io"   # the main org GitHub Pages URL
+baseurl: "/hpc_resource_management"              # the repo name
 
 remote_theme: mmistakes/minimal-mistakes
 
