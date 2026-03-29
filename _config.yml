@@ -1,0 +1,32 @@
+title: "My Research Team"
+name: "My Research Team"
+description: "Official website of our research group"
+
+remote_theme: mmistakes/minimal-mistakes
+
+plugins:
+  - jekyll-include-cache
+
+# Site settings
+minimal_mistakes_skin: "default"
+
+# Navigation
+collections:
+  team:
+    output: true
+  research:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: single
