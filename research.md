@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Research"
-permalink: hpc_resource_management/research/
+permalink: /research/
 ---
 
 {% for post in site.research %}
