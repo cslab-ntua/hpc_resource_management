@@ -9,10 +9,10 @@ author_profile: false
 We work on cutting-edge topics in science and technology.
 
 ## 🔬 Research
-See all research areas [here](/hpc_resource_management/research/)
+See all research areas [here]({{ "/research/" | relative_url }})
 
 ## 👥 Team
-Meet our team [here](/hpc_resource_management/team/)
+Meet our team [here]({{ "/team/" | relative_url }})
 
 ## 📁 Projects
-Explore projects [here](/hpc_resource_management/projects/)
+Explore projects [here]({{ "/projects/" | relative_url }})
