@@ -1,6 +1,6 @@
 ---
 title: "Co-Scheduling"
-permalink: /research/coscheduling/
+permalink: hpc_resource_management/research/coscheduling/
 ---
 
 Research on co-scheduling.
