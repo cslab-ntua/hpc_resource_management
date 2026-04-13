@@ -17,33 +17,33 @@ Jobs with flexible resource allocation (moldable jobs) can be executed using dif
 
 ## Research Directions
 
-<div class="feature__wrapper" style="margin-top: 2rem;">
+<div class="feature__wrapper" style="margin-top: 2.5rem; display: flex; gap: 2rem;">
 
   <div class="feature__item" style="flex: 1;">
-    <div class="archive__item" style="padding: 1.8rem; border: 1px solid #eee; border-radius: 10px;">
-      <h2 class="archive__item-title">Scheduling Algorithms</h2>
+    <div class="archive__item" style="padding: 2.2rem; border: 1px solid #eee; border-radius: 12px; height: 100%;">
+      <h2 class="archive__item-title" style="margin-bottom: 1rem;">Scheduling Algorithms</h2>
       <div class="archive__item-excerpt">
         <p>
           Designing schedulers that dynamically select the best resource allocation
           for each job based on system state and performance models.
         </p>
       </div>
-      <p>
+      <p style="margin-top: 1.5rem;">
         <a href="{{ '/research/moldability/scheduling/' | relative_url }}" class="btn btn--primary btn--large">Learn more</a>
       </p>
     </div>
   </div>
 
   <div class="feature__item" style="flex: 1;">
-    <div class="archive__item" style="padding: 1.8rem; border: 1px solid #eee; border-radius: 10px;">
-      <h2 class="archive__item-title">Performance Modeling</h2>
+    <div class="archive__item" style="padding: 2.2rem; border: 1px solid #eee; border-radius: 12px; height: 100%;">
+      <h2 class="archive__item-title" style="margin-bottom: 1rem;">Performance Modeling</h2>
       <div class="archive__item-excerpt">
         <p>
           Building models to predict how applications scale with resources,
           enabling better scheduling and allocation decisions.
         </p>
       </div>
-      <p>
+      <p style="margin-top: 1.5rem;">
         <a href="{{ '/research/moldability/performance/' | relative_url }}" class="btn btn--primary btn--large">Learn more</a>
       </p>
     </div>
