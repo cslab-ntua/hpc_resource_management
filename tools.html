@@ -1,0 +1,170 @@
+---
+layout: archive
+title: "Tools"
+permalink: /tools/
+---
+
+<style>
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tool-card {
+  background: var(--background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--link-color);
+}
+
+.tool-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tool-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.tool-card h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tool-card h2 a:hover {
+  color: var(--link-color);
+}
+
+.tool-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--link-color);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tool-content {
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+
+.tool-description {
+  color: var(--text-color-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.tool-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.tool-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-color-muted);
+}
+
+.tool-footer {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.tool-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tool-link:hover {
+  text-decoration: underline;
+}
+
+.tool-link::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+
+.tool-link:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+</style>
+
+<div class="tools-grid">
+  {% for tool in site.tools %}
+    <div class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon">
+          {{ tool.icon | default: "🛠️" }}
+        </div>
+        {% if tool.status %}
+          <div class="tool-badge">{{ tool.status }}</div>
+        {% endif %}
+        <h2>
+          <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
+        </h2>
+      </div>
+      <div class="tool-content">
+        <div class="tool-description">
+          {{ tool.description | default: "A tool developed by our research group." }}
+        </div>
+        <div class="tool-meta">
+          {% if tool.language %}
+            <span class="tool-meta-item">💻 {{ tool.language }}</span>
+          {% endif %}
+          {% if tool.version %}
+            <span class="tool-meta-item">📦 v{{ tool.version }}</span>
+          {% endif %}
+          {% if tool.license %}
+            <span class="tool-meta-item">📄 {{ tool.license }}</span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="tool-footer">
+        <a href="{{ tool.url | relative_url }}" class="tool-link">
+          Learn more
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
