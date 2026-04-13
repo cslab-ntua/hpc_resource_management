@@ -1,7 +1,7 @@
 ---
 title: "Moldability"
 permalink: /research/moldability/
-layout: single
+layout: wide
 ---
 
 ## What is Moldability?
@@ -14,9 +14,9 @@ Moldability refers to the ability of applications to adapt their resource usage 
 
 <div class="feature__wrapper">
 
-  <div class="feature__item">
-    <div class="archive__item">
-      <h3 class="archive__item-title">Scheduling Algorithms</h3>
+  <div class="feature__item" style="flex: 1; min-width: 300px;">
+    <div class="archive__item" style="padding: 2rem; border: 1px solid #eee; border-radius: 12px;">
+      <h2 class="archive__item-title">Scheduling Algorithms</h2>
       <div class="archive__item-excerpt">
         <p>
           Designing schedulers that dynamically select the best resource allocation
@@ -24,14 +24,14 @@ Moldability refers to the ability of applications to adapt their resource usage 
         </p>
       </div>
       <p>
-        <a href="{{ '/research/moldability/scheduling/' | relative_url }}" class="btn btn--primary">Learn more</a>
+        <a href="{{ '/research/moldability/scheduling/' | relative_url }}" class="btn btn--primary btn--large">Learn more</a>
       </p>
     </div>
   </div>
 
-  <div class="feature__item">
-    <div class="archive__item">
-      <h3 class="archive__item-title">Performance Modeling</h3>
+  <div class="feature__item" style="flex: 1; min-width: 300px;">
+    <div class="archive__item" style="padding: 2rem; border: 1px solid #eee; border-radius: 12px;">
+      <h2 class="archive__item-title">Performance Modeling</h2>
       <div class="archive__item-excerpt">
         <p>
           Building models to predict how applications scale with resources,
@@ -39,7 +39,7 @@ Moldability refers to the ability of applications to adapt their resource usage 
         </p>
       </div>
       <p>
-        <a href="{{ '/research/moldability/performance/' | relative_url }}" class="btn btn--primary">Learn more</a>
+        <a href="{{ '/research/moldability/performance/' | relative_url }}" class="btn btn--primary btn--large">Learn more</a>
       </p>
     </div>
   </div>
