@@ -4,6 +4,8 @@ title: "Research"
 permalink: /research/
 ---
 
-{% for post in site.research %}
-  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+{% for item in site.research %}
+  {% if item.top_level == true %}
+    <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+  {% endif %}
 {% endfor %}
