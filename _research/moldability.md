@@ -1,21 +1,26 @@
 ---
 title: "Moldability"
 permalink: /research/moldability/
-layout: wide
+layout: single
+classes: wide
 ---
 
-## What is Moldability?
+<style>
+.page__content {
+  max-width: 1000px;
+}
+</style>
 
-Moldability refers to the ability of applications to adapt their resource usage (e.g., number of processors) at runtime or scheduling time, enabling more efficient utilization of HPC systems and improved job turnaround times.
+Jobs with flexible resource allocation (moldable jobs) can be executed using different possible numbers of processes, selected from a set of values specified by the user. The scheduler then chooses one of these possible process counts for each job in the queue. The main components of the problem include predicting the scalability of jobs and developing optimization algorithms for selecting the appropriate number of processes per job, with the goal of satisfying one or more objective criteria. In this context, the following research directions are being pursued.
 
 ---
 
 ## Research Directions
 
-<div class="feature__wrapper">
+<div class="feature__wrapper" style="margin-top: 2rem;">
 
-  <div class="feature__item" style="flex: 1; min-width: 300px;">
-    <div class="archive__item" style="padding: 2rem; border: 1px solid #eee; border-radius: 12px;">
+  <div class="feature__item" style="flex: 1;">
+    <div class="archive__item" style="padding: 1.8rem; border: 1px solid #eee; border-radius: 10px;">
       <h2 class="archive__item-title">Scheduling Algorithms</h2>
       <div class="archive__item-excerpt">
         <p>
@@ -29,8 +34,8 @@ Moldability refers to the ability of applications to adapt their resource usage 
     </div>
   </div>
 
-  <div class="feature__item" style="flex: 1; min-width: 300px;">
-    <div class="archive__item" style="padding: 2rem; border: 1px solid #eee; border-radius: 12px;">
+  <div class="feature__item" style="flex: 1;">
+    <div class="archive__item" style="padding: 1.8rem; border: 1px solid #eee; border-radius: 10px;">
       <h2 class="archive__item-title">Performance Modeling</h2>
       <div class="archive__item-excerpt">
         <p>
