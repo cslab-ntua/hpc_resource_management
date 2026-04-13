@@ -19,6 +19,7 @@ collections:
     output: true
   research:
     output: true
+    permalink: /:collection/:path/
   tools:
     output: true
   projects:
