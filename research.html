@@ -4,10 +4,79 @@ title: "Research"
 permalink: /research/
 ---
 
-{% for item in site.research %}
-  {% if item.top_level and item.title %}
-    <h2>
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-    </h2>
-  {% endif %}
-{% endfor %}
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.research-card {
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.research-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+
+.research-card h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.research-card h2 a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.research-description {
+  color: var(--text-color-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.research-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+</style>
+
+<div class="research-grid">
+  {% for item in site.research %}
+    {% if item.top_level and item.title %}
+      <div class="research-card">
+        <h2>
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </h2>
+        <div class="research-description">
+          {{ item.description | default: "Click to learn more about our research in this area." }}
+        </div>
+        <a href="{{ item.url | relative_url }}" class="research-link">
+          Learn more →
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,124 @@
+---
+layout: archive
+title: "Team"
+permalink: /team/
+---
+
+<style>
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: var(--background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.team-photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--background-secondary);
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.team-card h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.team-card h2 a:hover {
+  color: var(--link-color);
+}
+
+.team-role {
+  color: var(--link-color);
+  font-weight: 500;
+  margin: 0.25rem 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.team-bio {
+  color: var(--text-color-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0 0;
+}
+
+.team-links {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 1rem;
+}
+
+.team-links a {
+  color: var(--text-color-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.team-links a:hover {
+  color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+</style>
+
+<div class="team-grid">
+  {% for member in site.team %}
+    <div class="team-card">
+      {% if member.photo %}
+        <img src="{{ member.photo | relative_url }}" alt="{{ member.title }}" class="team-photo">
+      {% endif %}
+      <div class="team-info">
+        <h2>
+          <a href="{{ member.url | relative_url }}">{{ member.title }}</a>
+        </h2>
+        <div class="team-role">{{ member.role | default: "Team Member" }}</div>
+        {% if member.bio %}
+          <p class="team-bio">{{ member.bio | truncate: 120 }}</p>
+        {% endif %}
+        <div class="team-links">
+          {% if member.email %}
+            <a href="mailto:{{ member.email }}">📧 Email</a>
+          {% endif %}
+          {% if member.github %}
+            <a href="{{ member.github }}">💻 GitHub</a>
+          {% endif %}
+          {% if member.scholar %}
+            <a href="{{ member.scholar }}">📝 Scholar</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
