@@ -1,7 +1,9 @@
 ---
 title: "Nikos Triantafyllis"
 role: "PhD Candidate"
-permalink: /team/ntriantafyl/
+permalink: /team/images/ntriantafyl/
+photo: "/assets/images/nikos.jpg"
+email: ntriantafyl@cslab.ece.ntua.gr
 ---
 
 Works on co-scheduling  
