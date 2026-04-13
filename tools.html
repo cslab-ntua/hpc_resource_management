@@ -31,16 +31,32 @@ permalink: /tools/
 
 .tool-header {
   padding: 1.5rem 1.5rem 0 1.5rem;
+  text-align: center;
 }
 
 .tool-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.tool-icon-text {
+  font-size: 3rem;
 }
 
 .tool-card h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .tool-card h2 a {
@@ -51,19 +67,6 @@ permalink: /tools/
 
 .tool-card h2 a:hover {
   color: var(--link-color);
-}
-
-.tool-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background: var(--link-color);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 600;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .tool-content {
@@ -78,25 +81,11 @@ permalink: /tools/
   margin: 0.75rem 0 1rem 0;
 }
 
-.tool-meta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-  font-size: 0.85rem;
-}
-
-.tool-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: var(--text-color-muted);
-}
-
 .tool-footer {
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   border-top: 1px solid var(--border-color);
   margin-top: 1rem;
+  text-align: center;
 }
 
 .tool-link {
@@ -135,11 +124,16 @@ permalink: /tools/
     <div class="tool-card">
       <div class="tool-header">
         <div class="tool-icon">
-          {{ tool.icon | default: "🛠️" }}
+          {% if tool.icon %}
+            {% if tool.icon contains ".png" or tool.icon contains ".jpg" or tool.icon contains ".svg" %}
+              <img src="{{ tool.icon | relative_url }}" alt="{{ tool.title }}">
+            {% else %}
+              <span class="tool-icon-text">{{ tool.icon }}</span>
+            {% endif %}
+          {% else %}
+            <span class="tool-icon-text">🛠️</span>
+          {% endif %}
         </div>
-        {% if tool.status %}
-          <div class="tool-badge">{{ tool.status }}</div>
-        {% endif %}
         <h2>
           <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
         </h2>
@@ -147,17 +141,6 @@ permalink: /tools/
       <div class="tool-content">
         <div class="tool-description">
           {{ tool.description | default: "A tool developed by our research group." }}
-        </div>
-        <div class="tool-meta">
-          {% if tool.language %}
-            <span class="tool-meta-item">💻 {{ tool.language }}</span>
-          {% endif %}
-          {% if tool.version %}
-            <span class="tool-meta-item">📦 v{{ tool.version }}</span>
-          {% endif %}
-          {% if tool.license %}
-            <span class="tool-meta-item">📄 {{ tool.license }}</span>
-          {% endif %}
         </div>
       </div>
       <div class="tool-footer">
