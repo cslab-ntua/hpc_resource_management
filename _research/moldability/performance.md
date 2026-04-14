@@ -172,6 +172,62 @@ classes: wide
   text-decoration: underline;
 }
 
+/* Contact section styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--link-color);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.contact-role {
+  color: var(--link-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-email {
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.contact-email a {
+  color: var(--text-color-muted);
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .tools-grid {
@@ -191,27 +247,6 @@ classes: wide
     performance counters/resource consumption profiling or submission time features, using 
     real scientific applications, benchmarks, or synthetic benchmarks.
   </p>
-</div>
-
-<h2>🔬 Key Approaches</h2>
-
-<div class="methods-grid">
-  <div class="method-card">
-    <div class="method-icon">📊</div>
-    <p>Performance Counters & Resource Profiling</p>
-  </div>
-  <div class="method-card">
-    <div class="method-icon">🤖</div>
-    <p>Machine Learning models</p>
-  </div>
-  <div class="method-card">
-    <div class="method-icon">⚙️</div>
-    <p>Real Scientific Applications</p>
-  </div>
-  <div class="method-card">
-    <div class="method-icon">📈</div>
-    <p>Benchmarks & Synthetic Workloads</p>
-  </div>
 </div>
 
 <h2>🏷️ Keywords</h2>
@@ -266,6 +301,31 @@ classes: wide
       </ul>
     </div>
   </div>
+</div>
+
+<h2>👥 Contact</h2>
+
+<div class="contact-grid">
+  <div class="contact-card">
+    <div class="contact-icon">👨‍💻</div>
+    <h3>Thanos Tsoukleidis-Karydakis</h3>
+    <div class="contact-role">PhD Candidate</div>
+    <div class="contact-email">
+      <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
+    </div>
+  </div>
+  
+  <!-- Add more team members as needed -->
+  <!--
+  <div class="contact-card">
+    <div class="contact-icon">👩‍💻</div>
+    <h3>Name Surname</h3>
+    <div class="contact-role">Role</div>
+    <div class="contact-email">
+      <a href="mailto:email@cslab.ece.ntua.gr">email@cslab.ece.ntua.gr</a>
+    </div>
+  </div>
+  -->
 </div>
 
 <h2>📚 Bibliography</h2>
