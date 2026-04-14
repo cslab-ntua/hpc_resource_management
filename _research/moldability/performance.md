@@ -76,31 +76,27 @@ classes: wide
 }
 
 .bibliography li {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background: var(--background-secondary);
-  border-radius: 8px;
-  border-left: 3px solid var(--link-color);
-  transition: all 0.2s ease;
+  padding: 0.75rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.bibliography li:hover {
-  transform: translateX(5px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.bibliography li:last-child {
+  border-bottom: none;
 }
 
-.bibliography li p {
-  margin: 0;
+.bib-authors {
+  color: var(--text-color);
   font-size: 0.9rem;
-  line-height: 1.5;
 }
 
 .bib-title {
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--link-color);
+  font-size: 0.9rem;
 }
 
-.bib-authors, .bib-venue {
+.bib-venue {
   color: var(--text-color-muted);
   font-size: 0.85rem;
 }
@@ -245,29 +241,30 @@ classes: wide
     <p>Develop analytical or machine learning job scalability prediction models</p>
   </div>
   
-<div class="tool-card">
-  <div class="tool-icon">📊</div>
-  <h3>Performance Profiling Tools</h3>
-  <p>Tools for collecting performance counters and resource usage data</p>
-  <div style="margin-top: 1rem;">
-    <strong>Tools:</strong>
-    <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
-      <li><a href="https://perfwiki.github.io/main/" target="_blank" style="color: var(--link-color);">perf tool</a></li>
-      <li><a href="https://github.com/llnl/mpiP" target="_blank" style="color: var(--link-color);">mpiP tool</a></li>
-    </ul>
+  <div class="tool-card">
+    <div class="tool-icon">📊</div>
+    <h3>Performance Profiling Tools</h3>
+    <p>Tools for collecting performance counters and resource usage data</p>
+    <div style="margin-top: 1rem;">
+      <strong>Tools:</strong>
+      <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+        <li><a href="https://perfwiki.github.io/main/" target="_blank" style="color: var(--link-color);">perf tool</a></li>
+        <li><a href="https://github.com/llnl/mpiP" target="_blank" style="color: var(--link-color);">mpiP tool</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="tool-card">
-  <div class="tool-icon">🔧</div>
-  <h3>Benchmark Suites</h3>
-  <p>Standard and synthetic benchmarks for scalability evaluation</p>
-  <div style="margin-top: 1rem;">
-    <strong>Suites:</strong>
-    <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
-      <li><a href="https://www.nas.nasa.gov/software/npb.html" target="_blank" style="color: var(--link-color);">NAS Parallel Benchmarks</a></li>
-      <li><a href="https://www.spec.org/hpc2021/" target="_blank" style="color: var(--link-color);">SPEC Benchmarks</a></li>
-    </ul>
+  <div class="tool-card">
+    <div class="tool-icon">🔧</div>
+    <h3>Benchmark Suites</h3>
+    <p>Standard and synthetic benchmarks for scalability evaluation</p>
+    <div style="margin-top: 1rem;">
+      <strong>Suites:</strong>
+      <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+        <li><a href="https://www.nas.nasa.gov/software/npb.html" target="_blank" style="color: var(--link-color);">NAS Parallel Benchmarks</a></li>
+        <li><a href="https://www.spec.org/hpc2021/" target="_blank" style="color: var(--link-color);">SPEC Benchmarks</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -275,19 +272,19 @@ classes: wide
 
 <ul class="bibliography">
   <li>
-    <p class="bib-title">Using automated performance modeling to find scalability bugs in complex codes</p>
-    <p class="bib-authors">Calotoiu, A., Hoefler, T., Poke, M., & Wolf, F.</p>
-    <p class="bib-venue">In Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (pp. 1-12), 2013.</p>
+    <div class="bib-authors">Calotoiu, A., Hoefler, T., Poke, M., & Wolf, F. (2013)</div>
+    <div class="bib-title">"Using automated performance modeling to find scalability bugs in complex codes"</div>
+    <div class="bib-venue">In Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis (pp. 1-12)</div>
   </li>
   <li>
-    <p class="bib-title">A regression-based approach to scalability prediction</p>
-    <p class="bib-authors">Barnes, B. J., Rountree, B., Lowenthal, D. K., Reeves, J., De Supinski, B., & Schulz, M.</p>
-    <p class="bib-venue">In Proceedings of the 22nd annual international conference on Supercomputing (pp. 368-377), 2008.</p>
+    <div class="bib-authors">Barnes, B. J., Rountree, B., Lowenthal, D. K., Reeves, J., De Supinski, B., & Schulz, M. (2008)</div>
+    <div class="bib-title">"A regression-based approach to scalability prediction"</div>
+    <div class="bib-venue">In Proceedings of the 22nd annual international conference on Supercomputing (pp. 368-377)</div>
   </li>
   <li>
-    <p class="bib-title">McBound: An online framework to characterize and classify memory/compute-bound HPC jobs</p>
-    <p class="bib-authors">Antici, F., Bartolini, A., Kiziltan, Z., Babaoglu, O., & Kodama, Y.</p>
-    <p class="bib-venue">In SC24: International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 1-15), IEEE, 2024.</p>
+    <div class="bib-authors">Antici, F., Bartolini, A., Kiziltan, Z., Babaoglu, O., & Kodama, Y. (2024)</div>
+    <div class="bib-title">"McBound: An online framework to characterize and classify memory/compute-bound HPC jobs"</div>
+    <div class="bib-venue">In SC24: International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 1-15), IEEE</div>
   </li>
 </ul>
 
