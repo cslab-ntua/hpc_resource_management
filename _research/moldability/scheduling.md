@@ -298,6 +298,14 @@ classes: wide
       <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
     </div>
   </div>
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>Kostis Katsikopoulos</h3>
+    <div class="contact-role">Researcher</div>
+    <div class="contact-email">
+      <a href="mailto:kkats@cslab.ece.ntua.gr">kkats@cslab.ece.ntua.gr</a>
+    </div>
+  </div>
 </div>
 
 <h2>📚 Bibliography</h2>
