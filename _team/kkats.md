@@ -2,7 +2,7 @@
 title: "Kostis Katsikopoulos"
 role: "Researcher"
 permalink: /team/kkats/
-photo: "/assets/images/kostis.jpg"
+photo: "/assets/images/team/kostis.jpg"
 email: kkats@cslab.ece.ntua.gr
 linkedin: "https://www.linkedin.com/in/konstantinos-katsikopoulos-04b378246"
 ---
@@ -61,7 +61,7 @@ linkedin: "https://www.linkedin.com/in/konstantinos-katsikopoulos-04b378246"
 
 .profile-links a:hover {
   background: var(--link-color);
-  color: white;
+  color: grey;
 }
 
 @media (max-width: 768px) {

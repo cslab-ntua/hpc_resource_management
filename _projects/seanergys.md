@@ -2,7 +2,7 @@
 title: "SEANERGYS"
 permalink: /projects/seanergys/
 description: "Software for Efficient and Energy-Aware Supercomputers"
-photo: "/assets/images/seanergys.jpg"
+photo: "/assets/images/projects/seanergys.jpg"
 status: "Active"
 ---
 

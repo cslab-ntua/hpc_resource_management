@@ -2,7 +2,7 @@
 title: "Thanos Tsoukleidis-Karydakis"
 role: "PhD Candidate"
 permalink: /team/ttsoukl/
-photo: "/assets/images/thanos.jpg"
+photo: "/assets/images/team/thanos.jpg"
 email: ttsoukl@cslab.ece.ntua.gr
 linkedin: "https://www.linkedin.com/in/thanos-tsoukleidis-karydakis-15a07a329"
 ---
@@ -61,7 +61,7 @@ linkedin: "https://www.linkedin.com/in/thanos-tsoukleidis-karydakis-15a07a329"
 
 .profile-links a:hover {
   background: var(--link-color);
-  color: white;
+  color: grey;
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
 title: "Nikos Triantafyllis"
 role: "PhD Candidate"
 permalink: /team/ntriantafyl/
-photo: "/assets/images/nikos.jpg"
+photo: "/assets/images/team/nikos.jpg"
 email: ntriantafyl@cslab.ece.ntua.gr
 linkedin: "https://www.linkedin.com/in/nikolaos-triantafyllis-08bb3996"
 ---
@@ -61,7 +61,7 @@ linkedin: "https://www.linkedin.com/in/nikolaos-triantafyllis-08bb3996"
 
 .profile-links a:hover {
   background: var(--link-color);
-  color: white;
+  color: grey;
 }
 
 @media (max-width: 768px) {

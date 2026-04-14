@@ -2,7 +2,7 @@
 title: "REGALE"
 permalink: /projects/regale/
 description: "An open architecture to equip next generation HPC applications with exascale capabilities"
-photo: "/assets/images/regale.jpg"
+photo: "/assets/images/projects/regale.jpg"
 status: "Closed"
 ---
 

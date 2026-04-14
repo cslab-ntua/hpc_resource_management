@@ -2,7 +2,7 @@
 title: "Alexandros Haritatos"
 role: "PhD Candidate"
 permalink: /team/aharit/
-photo: "/assets/images/alex.jpg"
+photo: "/assets/images/team/alex.jpg"
 email: aharit@cslab.ece.ntua.gr
 linkedin: "https://www.linkedin.com/in/alexandrosharitatos"
 ---
@@ -61,7 +61,7 @@ linkedin: "https://www.linkedin.com/in/alexandrosharitatos"
 
 .profile-links a:hover {
   background: var(--link-color);
-  color: white;
+  color: grey;
 }
 
 @media (max-width: 768px) {
