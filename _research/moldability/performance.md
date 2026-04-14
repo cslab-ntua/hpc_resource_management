@@ -305,27 +305,15 @@ classes: wide
 
 <h2>👥 Contact</h2>
 
-<div class="contact-grid">
+<div class="contact-grid" style="grid-template-columns: repeat(2, 1fr);">
   <div class="contact-card">
-    <div class="contact-icon">👨‍💻</div>
+    <div class="contact-icon"></div>
     <h3>Thanos Tsoukleidis-Karydakis</h3>
     <div class="contact-role">PhD Candidate</div>
     <div class="contact-email">
       <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
     </div>
   </div>
-  
-  <!-- Add more team members as needed -->
-  <!--
-  <div class="contact-card">
-    <div class="contact-icon">👩‍💻</div>
-    <h3>Name Surname</h3>
-    <div class="contact-role">Role</div>
-    <div class="contact-email">
-      <a href="mailto:email@cslab.ece.ntua.gr">email@cslab.ece.ntua.gr</a>
-    </div>
-  </div>
-  -->
 </div>
 
 <h2>📚 Bibliography</h2>
