@@ -46,6 +46,8 @@ permalink: /projects/
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .project-card h2 {
@@ -185,35 +187,29 @@ permalink: /projects/
 <div class="projects-grid">
   {% for project in site.projects %}
     <div class="project-card">
-      {% if project.image %}
+      {% if project.photo %}
+        <img src="{{ project.photo | relative_url }}" alt="{{ project.title }}" class="project-image">
+      {% elsif project.image %}
         <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+      {% else %}
+        <div class="project-image" style="display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+          📁
+        </div>
       {% endif %}
+      
       <div class="project-content">
         <div class="project-header">
           <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
           {% if project.status %}
             <span class="project-status status-{{ project.status | downcase }}">{{ project.status }}</span>
+          {% else %}
+            <span class="project-status status-active">Active</span>
           {% endif %}
         </div>
         
         <div class="project-description">
           {{ project.description | default: "Research project from our group." }}
         </div>
-        
-        <div class="project-meta">
-          {% if project.period %}
-            <span class="project-meta-item">📅 {{ project.period }}</span>
-          {% endif %}
-          {% if project.funding %}
-            <span class="project-meta-item">💰 {{ project.funding }}</span>
-          {% endif %}
-        </div>
-        
-        {% if project.funding_agency %}
-          <div class="project-funding">
-            Funded by: {{ project.funding_agency }}
-          </div>
-        {% endif %}
       </div>
       
       <div class="project-footer">
