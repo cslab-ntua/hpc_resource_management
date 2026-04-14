@@ -9,7 +9,7 @@ author_profile: false
 /* Card Grid Styles */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0 2rem 0;
 }
@@ -18,10 +18,11 @@ author_profile: false
   background: var(--background-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   transition: all 0.3s ease;
   text-decoration: none;
   display: block;
+  text-align: center;
 }
 
 .feature-card:hover {
@@ -31,45 +32,28 @@ author_profile: false
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
   color: var(--text-color);
-}
-
-.feature-card p {
-  color: var(--text-color-muted);
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .feature-count {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   color: var(--link-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.feature-label {
+  color: var(--text-color-muted);
   font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.view-all {
-  text-align: right;
-  margin: -2rem 0 1rem 0;
-}
-
-.view-all a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.view-all a:hover {
-  text-decoration: underline;
+  margin-top: 0.25rem;
 }
 
 /* Responsive */
@@ -77,11 +61,6 @@ author_profile: false
   .feature-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-  
-  .view-all {
-    text-align: left;
-    margin: -1rem 0 1rem 0;
   }
 }
 </style>
@@ -93,82 +72,59 @@ High Performance Computing (HPC) clusters are often used to solve complex proble
 <h2>🔬 Research</h2>
 
 <div class="feature-grid">
-  {% for item in site.research %}
-    {% if item.top_level and item.title %}
-      <a href="{{ item.url | relative_url }}" class="feature-card">
-        <div class="feature-icon">{{ item.icon | default: "🔬" }}</div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description | default: "Explore our research in this area." | truncate: 100 }}</p>
-        <span class="feature-count">Learn more →</span>
-      </a>
-    {% endif %}
-  {% endfor %}
+  <a href="{{ "/research/" | relative_url }}" class="feature-card">
+    <div class="feature-icon">🔬</div>
+    <h3>Research Areas</h3>
+    <div class="feature-count">{{ site.research | where: "top_level", true | size }}</div>
+    <div class="feature-label">research directions</div>
+  </a>
 </div>
 
-<div class="view-all">
-  <a href="{{ "/research/" | relative_url }}">View all research →</a>
+<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
+  <a href="{{ "/research/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all research →</a>
 </div>
 
 <h2>🛠️ Tools</h2>
 
 <div class="feature-grid">
-  {% assign featured_tools = site.tools | limit: 3 %}
-  {% for tool in featured_tools %}
-    <a href="{{ tool.url | relative_url }}" class="feature-card">
-      <div class="feature-icon">
-        {% if tool.icon %}
-          {% if tool.icon contains ".png" or tool.icon contains ".jpg" or tool.icon contains ".svg" %}
-            <img src="{{ tool.icon | relative_url }}" alt="{{ tool.title }}" style="width: 40px; height: 40px; object-fit: contain;">
-          {% else %}
-            {{ tool.icon }}
-          {% endif %}
-        {% else %}
-          🛠️
-        {% endif %}
-      </div>
-      <h3>{{ tool.title | truncate: 40 }}</h3>
-      <p>{{ tool.description | default: "A tool developed by our research group." | truncate: 100 }}</p>
-      <span class="feature-count">Learn more →</span>
-    </a>
-  {% endfor %}
+  <a href="{{ "/tools/" | relative_url }}" class="feature-card">
+    <div class="feature-icon">🛠️</div>
+    <h3>Software Tools</h3>
+    <div class="feature-count">{{ site.tools | size }}</div>
+    <div class="feature-label">custom tools</div>
+  </a>
 </div>
 
-<div class="view-all">
-  <a href="{{ "/tools/" | relative_url }}">View all tools →</a>
+<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
+  <a href="{{ "/tools/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all tools →</a>
 </div>
 
 <h2>👥 Team</h2>
 
 <div class="feature-grid">
-  {% assign team_members = site.team | limit: 3 %}
-  {% for member in team_members %}
-    <a href="{{ member.url | relative_url }}" class="feature-card">
-      <div class="feature-icon">👤</div>
-      <h3>{{ member.title }}</h3>
-      <p>{{ member.role | default: "Team Member" }}</p>
-      <span class="feature-count">View profile →</span>
-    </a>
-  {% endfor %}
+  <a href="{{ "/team/" | relative_url }}" class="feature-card">
+    <div class="feature-icon">👥</div>
+    <h3>Team Members</h3>
+    <div class="feature-count">{{ site.team | size }}</div>
+    <div class="feature-label">researchers</div>
+  </a>
 </div>
 
-<div class="view-all">
-  <a href="{{ "/team/" | relative_url }}">View all team →</a>
+<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
+  <a href="{{ "/team/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all team →</a>
 </div>
 
 <h2>📁 Projects</h2>
 
 <div class="feature-grid">
-  {% assign active_projects = site.projects | where: "status", "Active" | limit: 3 %}
-  {% for project in active_projects %}
-    <a href="{{ project.url | relative_url }}" class="feature-card">
-      <div class="feature-icon">{{ project.icon | default: "📁" }}</div>
-      <h3>{{ project.title | truncate: 40 }}</h3>
-      <p>{{ project.description | default: "Research project from our group." | truncate: 100 }}</p>
-      <span class="feature-count">Learn more →</span>
-    </a>
-  {% endfor %}
+  <a href="{{ "/projects/" | relative_url }}" class="feature-card">
+    <div class="feature-icon">📁</div>
+    <h3>Research Projects</h3>
+    <div class="feature-count">{{ site.projects | size }}</div>
+    <div class="feature-label">active projects</div>
+  </a>
 </div>
 
-<div class="view-all">
-  <a href="{{ "/projects/" | relative_url }}">View all projects →</a>
+<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
+  <a href="{{ "/projects/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all projects →</a>
 </div>
