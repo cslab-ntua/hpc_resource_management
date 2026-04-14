@@ -91,6 +91,24 @@ classes: wide
   text-decoration: underline;
 }
 
+.team-links {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-links a {
+  color: var(--text-color-muted);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.team-links a:hover {
+  color: var(--link-color);
+}
+
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;
@@ -123,6 +141,11 @@ classes: wide
                 <a href="mailto:{{ member.email }}">{{ member.email }}</a>
               </div>
             {% endif %}
+            <div class="team-links">
+              {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+              {% endif %}
+            </div>
           </div>
         </div>
       {% endif %}
@@ -150,6 +173,11 @@ classes: wide
                 <a href="mailto:{{ member.email }}">{{ member.email }}</a>
               </div>
             {% endif %}
+            <div class="team-links">
+              {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+              {% endif %}
+            </div>
           </div>
         </div>
       {% endif %}
@@ -177,6 +205,11 @@ classes: wide
                 <a href="mailto:{{ member.email }}">{{ member.email }}</a>
               </div>
             {% endif %}
+            <div class="team-links">
+              {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+              {% endif %}
+            </div>
           </div>
         </div>
       {% endif %}
