@@ -185,7 +185,19 @@ permalink: /projects/
 </style>
 
 <div class="projects-grid">
+  {% assign active_projects = "" | split: "" %}
+  {% assign completed_projects = "" | split: "" %}
+  
   {% for project in site.projects %}
+    {% assign status = project.status | default: "Active" %}
+    {% if status == "Active" or status == "Ongoing" %}
+      {% assign active_projects = active_projects | push: project %}
+    {% else %}
+      {% assign completed_projects = completed_projects | push: project %}
+    {% endif %}
+  {% endfor %}
+  
+  {% for project in active_projects %}
     <div class="project-card">
       {% if project.photo %}
         <img src="{{ project.photo | relative_url }}" alt="{{ project.title }}" class="project-image">
@@ -211,16 +223,34 @@ permalink: /projects/
           {{ project.description | default: "Research project from our group." }}
         </div>
       </div>
+    </div>
+  {% endfor %}
+  
+  {% for project in completed_projects %}
+    <div class="project-card">
+      {% if project.photo %}
+        <img src="{{ project.photo | relative_url }}" alt="{{ project.title }}" class="project-image">
+      {% elsif project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+      {% else %}
+        <div class="project-image" style="display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+          📁
+        </div>
+      {% endif %}
       
-      <div class="project-footer">
-        <a href="{{ project.url | relative_url }}" class="project-link">
-          Learn more
-        </a>
-        {% if project.github %}
-          <a href="{{ project.github }}" class="project-github" target="_blank">
-            📦 GitHub
-          </a>
-        {% endif %}
+      <div class="project-content">
+        <div class="project-header">
+          <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+          {% if project.status %}
+            <span class="project-status status-{{ project.status | downcase }}">{{ project.status }}</span>
+          {% else %}
+            <span class="project-status status-active">Active</span>
+          {% endif %}
+        </div>
+        
+        <div class="project-description">
+          {{ project.description | default: "Research project from our group." }}
+        </div>
       </div>
     </div>
   {% endfor %}
