@@ -3,7 +3,7 @@ title: "Marilena Salapa"
 role: "Researcher"
 permalink: /team/msalapa/
 email: msalapa@cslab.ece.ntua.gr
-# linkedin: "https://www.linkedin.com/in/konstantinos-katsikopoulos-04b378246"
+linkedin: "https://www.linkedin.com/in/marilena-salapa-3a64a33b9"
 ---
 
 <style>
