@@ -1,6 +1,6 @@
 ---
-title: "Performance Modeling"
-permalink: /research/moldability/performance/
+title: "Moldable Job Scheduling"
+permalink: /research/moldability/scheduling/
 layout: single
 classes: wide
 ---
