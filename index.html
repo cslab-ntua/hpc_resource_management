@@ -6,87 +6,257 @@ author_profile: false
 ---
 
 <style>
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin: 1.5rem 0;
+/* Hero section styles */
+.hero-section {
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--background-secondary) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
 }
 
-.section-card {
+.hero-section h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.lab-name {
+  color: var(--link-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.description-text {
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.description-text p {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(120deg, var(--link-color) 0%, var(--link-color) 100%);
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  font-weight: 500;
+}
+
+/* Card Grid Styles */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.feature-card {
   background: var(--background-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
-  text-align: center;
   transition: all 0.3s ease;
   text-decoration: none;
   display: block;
 }
 
-.section-card:hover {
+.feature-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   border-color: var(--link-color);
 }
 
-.section-icon {
+.feature-icon {
   font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.section-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
+.feature-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
 }
 
-.section-card p {
+.feature-card p {
   color: var(--text-color-muted);
-  font-size: 0.85rem;
   margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
+.feature-count {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--link-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--link-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.view-all {
+  text-align: right;
+  margin: -2.5rem 0 1rem 0;
+}
+
+.view-all a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.view-all a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .section-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .feature-grid {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
-}
-
-@media (max-width: 480px) {
-  .section-grid {
-    grid-template-columns: 1fr;
+  
+  .hero-section {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .view-all {
+    text-align: left;
+    margin: -1rem 0 1rem 0;
   }
 }
 </style>
 
-## Research Group within CSLab, National Technical University of Athens
-
-High Performance Computing (HPC) clusters are often used to solve complex problems across a wide range of research domains, such as weather modeling and human genome sequencing. Efficient job scheduling in these systems is a critical factor for achieving effective resource utilization and energy savings.
-
-<div class="section-grid">
-  <a href="{{ "/research/" | relative_url }}" class="section-card">
-    <div class="section-icon">🔬</div>
-    <h3>Research</h3>
-    <p>{{ site.research | where: "top_level", true | size }} research areas</p>
-  </a>
+<div class="hero-section">
+  <h1>HPC Resource Management Team</h1>
+  <div class="lab-name">🏛️ Research Group within CSLab, National Technical University of Athens</div>
   
-  <a href="{{ "/tools/" | relative_url }}" class="section-card">
-    <div class="section-icon">🛠️</div>
-    <h3>Tools</h3>
-    <p>{{ site.tools | size }} software tools</p>
-  </a>
-  
-  <a href="{{ "/team/" | relative_url }}" class="section-card">
-    <div class="section-icon">👥</div>
-    <h3>Team</h3>
-    <p>{{ site.team | size }} members</p>
-  </a>
-  
-  <a href="{{ "/projects/" | relative_url }}" class="section-card">
-    <div class="section-icon">📁</div>
-    <h3>Projects</h3>
-    <p>{{ site.projects | size }} projects</p>
-  </a>
+  <div class="description-text">
+    <p>
+      High Performance Computing (HPC) clusters are essential for solving complex problems across diverse research domains, 
+      from <span class="highlight">weather modeling</span> and <span class="highlight">climate prediction</span> to 
+      <span class="highlight">genome sequencing</span> and <span class="highlight">drug discovery</span>.
+    </p>
+    
+    <p>
+      At the heart of these systems lie two critical software components: the <strong>resource manager</strong> and the 
+      <strong>job scheduler</strong>. The resource manager handles resource allocation, while the job scheduler makes 
+      strategic decisions about <em>when</em> and <em>where</em> jobs will execute.
+    </p>
+    
+    <p>
+      Our research focuses on <strong>improving scheduler decision-making</strong> to achieve:
+    </p>
+    
+    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+      <li>⚡ <strong>Better resource utilization</strong> - Maximizing cluster efficiency</li>
+      <li>💚 <strong>Energy savings</strong> - Reducing the carbon footprint of HPC</li>
+      <li>🚀 <strong>Reduced job completion times</strong> - Accelerating scientific discovery</li>
+      <li>🔄 <strong>Improved fairness</strong> - Balancing workloads across users and projects</li>
+    </ul>
+  </div>
 </div>
 
-Learn more about our research, tools, team, and projects by exploring the links above.
+## 🔬 Research Areas
+
+<div class="feature-grid">
+  {% for item in site.research %}
+    {% if item.top_level and item.title %}
+      <a href="{{ item.url | relative_url }}" class="feature-card">
+        <div class="feature-icon">{{ item.icon | default: "🔬" }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description | default: "Explore our research in this area." | truncate: 100 }}</p>
+        <span class="feature-count">Learn more →</span>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="view-all">
+  <a href="{{ "/research/" | relative_url }}">View all research areas →</a>
+</div>
+
+## 🛠️ Featured Tools
+
+<div class="feature-grid">
+  {% assign featured_tools = site.tools | limit: 3 %}
+  {% for tool in featured_tools %}
+    <a href="{{ tool.url | relative_url }}" class="feature-card">
+      <div class="feature-icon">
+        {% if tool.icon %}
+          {% if tool.icon contains ".png" or tool.icon contains ".jpg" or tool.icon contains ".svg" %}
+            <img src="{{ tool.icon | relative_url }}" alt="{{ tool.title }}" style="width: 40px; height: 40px; object-fit: contain;">
+          {% else %}
+            {{ tool.icon }}
+          {% endif %}
+        {% else %}
+          🛠️
+        {% endif %}
+      </div>
+      <h3>{{ tool.title | truncate: 40 }}</h3>
+      <p>{{ tool.description | default: "A tool developed by our research group." | truncate: 100 }}</p>
+      <span class="feature-count">Learn more →</span>
+    </a>
+  {% endfor %}
+</div>
+
+<div class="view-all">
+  <a href="{{ "/tools/" | relative_url }}">View all tools →</a>
+</div>
+
+## 👥 Team Members
+
+<div class="feature-grid">
+  {% assign team_members = site.team | limit: 3 %}
+  {% for member in team_members %}
+    <a href="{{ member.url | relative_url }}" class="feature-card">
+      <div class="feature-icon">👤</div>
+      <h3>{{ member.title }}</h3>
+      <p>{{ member.role | default: "Team Member" }}</p>
+      {% if member.bio %}
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">{{ member.bio | truncate: 80 }}</p>
+      {% endif %}
+      <span class="feature-count">View profile →</span>
+    </a>
+  {% endfor %}
+</div>
+
+<div class="view-all">
+  <a href="{{ "/team/" | relative_url }}">View all team members →</a>
+</div>
+
+## 📁 Active Projects
+
+<div class="feature-grid">
+  {% assign active_projects = site.projects | where: "status", "Active" | limit: 3 %}
+  {% for project in active_projects %}
+    <a href="{{ project.url | relative_url }}" class="feature-card">
+      <div class="feature-icon">{{ project.icon | default: "📁" }}</div>
+      <h3>{{ project.title | truncate: 40 }}</h3>
+      <p>{{ project.description | default: "Research project from our group." | truncate: 100 }}</p>
+      {% if project.period %}
+        <span class="feature-count">{{ project.period }}</span>
+      {% else %}
+        <span class="feature-count">Learn more →</span>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
+
+<div class="view-all">
+  <a href="{{ "/projects/" | relative_url }}">View all projects →</a>
+</div>
