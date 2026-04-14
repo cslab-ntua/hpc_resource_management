@@ -267,6 +267,13 @@ classes: wide
     <p>Custom Python (co-)scheduling emulator</p>
     <a href="https://github.com/cslab-ntua/elise" target="_blank" class="tool-link">Learn more →</a>
   </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🖥️</div>
+    <h3>Flurm Framework</h3>
+    <p>Custom tool to submit the Flux RJMS as a standard batch job to the Slurm RJMS so as to test scheduling algorithms</p>
+    <a href="https://github.com/cslab-ntua/flurm" target="_blank" class="tool-link">Learn more →</a>
+  </div>
   
   <div class="tool-card">
     <div class="tool-icon">💡</div>
