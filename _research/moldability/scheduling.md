@@ -175,7 +175,7 @@ classes: wide
 /* Contact section styles */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -234,6 +234,11 @@ classes: wide
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 </style>
 
@@ -250,12 +255,12 @@ classes: wide
 <h2>🏷️ Keywords</h2>
 
 <div class="keywords">
-  <span class="keyword">Scalability Prediction</span>
-  <span class="keyword">MPI Applications</span>
-  <span class="keyword">Performance Modeling</span>
-  <span class="keyword">Resource Profiling</span>
-  <span class="keyword">HPC Benchmarking</span>
-  <span class="keyword">Machine Learning</span>
+  <span class="keyword">Moldable Job Scheduling</span>
+  <span class="keyword">Turnaround Time</span>
+  <span class="keyword">System Throughput</span>
+  <span class="keyword">Energy Efficiency</span>
+  <span class="keyword">Dynamic Pricing</span>
+  <span class="keyword">HPC Scheduling</span>
 </div>
 
 <h2>🛠️ Tools & Development Environments</h2>
@@ -286,25 +291,13 @@ classes: wide
 
 <div class="contact-grid">
   <div class="contact-card">
-    <div class="contact-icon">👨‍💻</div>
+    <div class="contact-icon"></div>
     <h3>Thanos Tsoukleidis-Karydakis</h3>
     <div class="contact-role">PhD Candidate</div>
     <div class="contact-email">
       <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
     </div>
   </div>
-  
-  <!-- Add more team members as needed -->
-  <!--
-  <div class="contact-card">
-    <div class="contact-icon">👩‍💻</div>
-    <h3>Name Surname</h3>
-    <div class="contact-role">Role</div>
-    <div class="contact-email">
-      <a href="mailto:email@cslab.ece.ntua.gr">email@cslab.ece.ntua.gr</a>
-    </div>
-  </div>
-  -->
 </div>
 
 <h2>📚 Bibliography</h2>
