@@ -51,19 +51,23 @@ top_level: true
 .research-card .btn {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--link-color);
-  color: white;
+  padding: 0.75rem 1.5rem;
+  background-color: #0066cc;
+  color: white !important;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: 500;
-  transition: background 0.2s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
   text-align: center;
+  border: none;
+  cursor: pointer;
 }
 
 .research-card .btn:hover {
-  background: var(--link-color-hover);
+  background-color: #004999;
   text-decoration: none;
+  transform: translateX(3px);
 }
 
 /* Responsive: Stack to 1 column on mobile */
