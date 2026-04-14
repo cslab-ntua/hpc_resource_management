@@ -3,9 +3,10 @@ title: "ELiSE : Efficient Lightweight Scheduling Estimator"
 permalink: /tools/elise/
 layout: single
 icon: "/assets/images/tools/elise.png"
+description: "A Python emulator for fast design and evaluation of HPC (co-)scheduling algorithms"
 ---
 
-ELiSE is a Python emulator developed in our laboratory for the fast design and evaluation of (co-)scheduling algorithms.
+ELiSE is a Python emulator developed in our laboratory for fast design and evaluation of HPC (co-)scheduling algorithms.
 
 ---
 

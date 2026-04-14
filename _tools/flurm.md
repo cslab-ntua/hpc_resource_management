@@ -3,6 +3,7 @@ title: "Flurm Framework"
 permalink: /tools/flurm/
 layout: single
 icon: "/assets/images/tools/flurm.png"
+description: "A framework that is used to evaluate (co-)scheduling algorithms in real HPC systems without administrative privileges"
 ---
 
 Flurm is a framework that requests a standard multi-node batch allocation from the Slurm Workload manager as a typical job and bootstraps a user-space Flux Resource Manager instance inside it, enabling schedulers validated in simulation to manage real MPI jobs in a production environment while experiencing real network and memory contention without administrative intervention.
