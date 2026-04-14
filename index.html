@@ -1,0 +1,92 @@
+---
+layout: home
+title: "HPC Resource Management Team"
+classes: wide
+author_profile: false
+---
+
+<style>
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.section-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--link-color);
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.section-card p {
+  color: var(--text-color-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+## Research Group within CSLab, National Technical University of Athens
+
+High Performance Computing (HPC) clusters are often used to solve complex problems across a wide range of research domains, such as weather modeling and human genome sequencing. Efficient job scheduling in these systems is a critical factor for achieving effective resource utilization and energy savings.
+
+<div class="section-grid">
+  <a href="{{ "/research/" | relative_url }}" class="section-card">
+    <div class="section-icon">🔬</div>
+    <h3>Research</h3>
+    <p>{{ site.research | where: "top_level", true | size }} research areas</p>
+  </a>
+  
+  <a href="{{ "/tools/" | relative_url }}" class="section-card">
+    <div class="section-icon">🛠️</div>
+    <h3>Tools</h3>
+    <p>{{ site.tools | size }} software tools</p>
+  </a>
+  
+  <a href="{{ "/team/" | relative_url }}" class="section-card">
+    <div class="section-icon">👥</div>
+    <h3>Team</h3>
+    <p>{{ site.team | size }} members</p>
+  </a>
+  
+  <a href="{{ "/projects/" | relative_url }}" class="section-card">
+    <div class="section-icon">📁</div>
+    <h3>Projects</h3>
+    <p>{{ site.projects | size }} projects</p>
+  </a>
+</div>
+
+Learn more about our research, tools, team, and projects by exploring the links above.
