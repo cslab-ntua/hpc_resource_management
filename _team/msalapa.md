@@ -60,7 +60,7 @@ linkedin: "https://www.linkedin.com/in/marilena-salapa-3a64a33b9"
 
 .profile-links a:hover {
   background: var(--link-color);
-  color: white;
+  color: grey;
 }
 
 @media (max-width: 768px) {
