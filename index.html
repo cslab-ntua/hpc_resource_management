@@ -9,7 +9,7 @@ author_profile: false
 /* Card Grid Styles */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0 2rem 0;
 }
@@ -56,6 +56,21 @@ author_profile: false
   margin-top: 0.25rem;
 }
 
+.view-all {
+  text-align: right;
+  margin: -1rem 0 2rem 0;
+}
+
+.view-all a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .feature-grid {
@@ -69,8 +84,6 @@ author_profile: false
 
 High Performance Computing (HPC) clusters are often used to solve complex problems across a wide range of research domains, such as weather modeling and human genome sequencing. Efficient job scheduling in these systems is a critical factor for achieving effective resource utilization and energy savings. The core software components of such systems include the resource manager and the job scheduler. The former is responsible for allocating resources, while the latter decides when and where jobs will be executed. A common objective across research directions in this field is the improvement of decision-making by the job scheduler.
 
-<h2>🔬 Research</h2>
-
 <div class="feature-grid">
   <a href="{{ "/research/" | relative_url }}" class="feature-card">
     <div class="feature-icon">🔬</div>
@@ -78,53 +91,25 @@ High Performance Computing (HPC) clusters are often used to solve complex proble
     <div class="feature-count">{{ site.research | where: "top_level", true | size }}</div>
     <div class="feature-label">research directions</div>
   </a>
-</div>
 
-<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
-  <a href="{{ "/research/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all research →</a>
-</div>
-
-<h2>🛠️ Tools</h2>
-
-<div class="feature-grid">
   <a href="{{ "/tools/" | relative_url }}" class="feature-card">
     <div class="feature-icon">🛠️</div>
     <h3>Software Tools</h3>
     <div class="feature-count">{{ site.tools | size }}</div>
     <div class="feature-label">custom tools</div>
   </a>
-</div>
 
-<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
-  <a href="{{ "/tools/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all tools →</a>
-</div>
-
-<h2>👥 Team</h2>
-
-<div class="feature-grid">
   <a href="{{ "/team/" | relative_url }}" class="feature-card">
     <div class="feature-icon">👥</div>
     <h3>Team Members</h3>
     <div class="feature-count">{{ site.team | size }}</div>
     <div class="feature-label">researchers</div>
   </a>
-</div>
 
-<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
-  <a href="{{ "/team/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all team →</a>
-</div>
-
-<h2>📁 Projects</h2>
-
-<div class="feature-grid">
   <a href="{{ "/projects/" | relative_url }}" class="feature-card">
     <div class="feature-icon">📁</div>
     <h3>Research Projects</h3>
     <div class="feature-count">{{ site.projects | size }}</div>
     <div class="feature-label">active projects</div>
   </a>
-</div>
-
-<div class="view-all" style="text-align: right; margin: -1rem 0 2rem 0;">
-  <a href="{{ "/projects/" | relative_url }}" style="color: var(--link-color); text-decoration: none;">View all projects →</a>
 </div>

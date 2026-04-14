@@ -2,6 +2,7 @@
 title: "Performance Modeling"
 permalink: /research/moldability/performance/
 layout: single
+classes: wide
 ---
 
 <style>
@@ -123,7 +124,7 @@ layout: single
 /* Tools & Environments section */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -174,11 +175,19 @@ layout: single
 .tool-link:hover {
   text-decoration: underline;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 </style>
 
 <div class="research-content">
 
-## 📊 Research Overview
+<h2>📊 Research Overview</h2>
 
 <div class="research-description">
   <p>
@@ -188,7 +197,7 @@ layout: single
   </p>
 </div>
 
-### 🔬 Key Approaches
+<h2>🔬 Key Approaches</h2>
 
 <div class="methods-grid">
   <div class="method-card">
@@ -196,8 +205,8 @@ layout: single
     <p>Performance Counters & Resource Profiling</p>
   </div>
   <div class="method-card">
-    <div class="method-icon">⏱️</div>
-    <p>Submission Time Features</p>
+    <div class="method-icon">🤖</div>
+    <p>Machine Learning models</p>
   </div>
   <div class="method-card">
     <div class="method-icon">⚙️</div>
@@ -209,7 +218,7 @@ layout: single
   </div>
 </div>
 
-### 🏷️ Keywords
+<h2>🏷️ Keywords</h2>
 
 <div class="keywords">
   <span class="keyword">Scalability Prediction</span>
@@ -217,20 +226,52 @@ layout: single
   <span class="keyword">Performance Modeling</span>
   <span class="keyword">Resource Profiling</span>
   <span class="keyword">HPC Benchmarking</span>
+  <span class="keyword">Machine Learning</span>
 </div>
 
-## 🛠️ Tools & Development Environments
+<h2>🛠️ Tools & Development Environments</h2>
 
 <div class="tools-grid">
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
     <h3>ARIS Supercomputer</h3>
-    <p>Greek National HPC system operated by GRNET, featuring Intel Xeon Gold processors, NVIDIA GPUs, and high-speed InfiniBand interconnect.</p>
-    <a href="https://hpc.grnet.gr/aris/" target="_blank" class="tool-link">Learn more →</a>
+    <p>Greek National HPC system operated by GRNET</p>
+    <a href="https://doc.aris.grnet.gr/" target="_blank" class="tool-link">Learn more →</a>
+  </div>
+  
+  <div class="tool-card">
+    <div class="tool-icon">💡</div>
+    <h3>Machine Learning models</h3>
+    <p>Develop analytical or machine learning job scalability prediction models</p>
+  </div>
+  
+<div class="tool-card">
+  <div class="tool-icon">📊</div>
+  <h3>Performance Profiling Tools</h3>
+  <p>Tools for collecting performance counters and resource usage data</p>
+  <div style="margin-top: 1rem;">
+    <strong>Tools:</strong>
+    <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+      <li><a href="https://perfwiki.github.io/main/" target="_blank" style="color: var(--link-color);">perf tool</a></li>
+      <li><a href="https://github.com/llnl/mpiP" target="_blank" style="color: var(--link-color);">mpiP tool</a></li>
+    </ul>
   </div>
 </div>
 
-## 📚 Bibliography
+<div class="tool-card">
+  <div class="tool-icon">🔧</div>
+  <h3>Benchmark Suites</h3>
+  <p>Standard and synthetic benchmarks for scalability evaluation</p>
+  <div style="margin-top: 1rem;">
+    <strong>Suites:</strong>
+    <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+      <li><a href="https://www.nas.nasa.gov/software/npb.html" target="_blank" style="color: var(--link-color);">NAS Parallel Benchmarks</a></li>
+      <li><a href="https://www.spec.org/hpc2021/" target="_blank" style="color: var(--link-color);">SPEC Benchmarks</a></li>
+    </ul>
+  </div>
+</div>
+
+<h2>📚 Bibliography</h2>
 
 <ul class="bibliography">
   <li>
