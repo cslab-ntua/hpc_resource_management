@@ -322,6 +322,14 @@ classes: wide
       <a href="mailto:kkats@cslab.ece.ntua.gr">kkats@cslab.ece.ntua.gr</a>
     </div>
   </div>
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>Marilena Salapa</h3>
+    <div class="contact-role">Researcher</div>
+    <div class="contact-email">
+      <a href="mailto:msalapa@cslab.ece.ntua.gr">msalapa@cslab.ece.ntua.gr</a>
+    </div>
+  </div>
 </div>
 
 <h2>📚 Bibliography</h2>

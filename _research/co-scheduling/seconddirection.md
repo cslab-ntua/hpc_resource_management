@@ -228,6 +228,50 @@ classes: wide
   text-decoration: underline;
 }
 
+/* Diploma Theses styles */
+.theses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.thesis-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.thesis-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--link-color);
+}
+
+.thesis-title a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.thesis-title a:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
+}
+
+.thesis-author {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.thesis-date {
+  color: var(--text-color-muted);
+  font-size: 0.8rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .tools-grid {
@@ -236,6 +280,11 @@ classes: wide
   }
   
   .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .theses-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -295,7 +344,7 @@ classes: wide
     <h3>Nikos Triantafyllis</h3>
     <div class="contact-role">PhD Candidate</div>
     <div class="contact-email">
-      <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ntriantafyl@cslab.ece.ntua.gr</a>
+      <a href="mailto:ntriantafyl@cslab.ece.ntua.gr">ntriantafyl@cslab.ece.ntua.gr</a>
     </div>
   </div>
   <div class="contact-card">
@@ -305,6 +354,26 @@ classes: wide
     <div class="contact-email">
       <a href="mailto:kkats@cslab.ece.ntua.gr">mail@cslab.ece.ntua.gr</a>
     </div>
+  </div>
+</div>
+
+<h2>📜 Relevant Completed Diploma Theses</h2>
+
+<div class="theses-grid">
+  <div class="thesis-card">
+    <div class="thesis-title">
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 1"</a>
+    </div>
+    <div class="thesis-author">Student Name 1</div>
+    <div class="thesis-date">2024</div>
+  </div>
+  
+  <div class="thesis-card">
+    <div class="thesis-title">
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 2"</a>
+    </div>
+    <div class="thesis-author">Student Name 2</div>
+    <div class="thesis-date">2023</div>
   </div>
 </div>
 
