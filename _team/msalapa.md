@@ -4,6 +4,7 @@ role: "Researcher"
 permalink: /team/msalapa/
 email: msalapa@cslab.ece.ntua.gr
 linkedin: "https://www.linkedin.com/in/marilena-salapa-3a64a33b9"
+photo: "/assets/images/team/marilena.jpg"
 ---
 
 <style>

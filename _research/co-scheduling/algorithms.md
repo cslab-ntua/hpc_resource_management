@@ -297,19 +297,18 @@ classes: wide
 
 <div class="research-description">
   <p>
-    Description
+    The goal of this work is to develop new algorithms for smarter job co-scheduling, leveraging knowledge of application behavior using the ELiSE simulator, while taking into account straggler effects or job speedups derived from prediction models. Developed algorithms can then be tested in a real-world setting using the Flurm framework.
   </p>
 </div>
 
 <h2>🏷️ Keywords</h2>
 
 <div class="keywords">
-  <span class="keyword">Keyword1</span>
-  <span class="keyword">Keyword2</span>
-  <span class="keyword">Keyword3</span>
-  <span class="keyword">Keyword4</span>
-  <span class="keyword">Keyword5</span>
-  <span class="keyword">Keyword6</span>
+  <span class="keyword">Co-Scheduling</span>
+  <span class="keyword">Makespan</span>
+  <span class="keyword">Turnaround Time</span>
+  <span class="keyword">Speedup</span>
+  <span class="keyword">Straggler Effect</span>
 </div>
 
 <h2>🛠️ Tools & Development Environments</h2>
@@ -317,22 +316,16 @@ classes: wide
 <div class="tools-grid">
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
-    <h3>Tool1</h3>
-    <p>Description</p>
+    <h3>ELiSE Emulator</h3>
+    <p>Custom Python (co-)scheduling emulator</p>
     <a href="https://github.com/cslab-ntua/elise" target="_blank" class="tool-link">Learn more →</a>
   </div>
 
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
-    <h3>Tool2</h3>
-    <p>Description</p>
+    <h3>Flurm Framework</h3>
+    <p>Custom tool to submit the Flux RJMS as a standard batch job to the Slurm RJMS so as to test scheduling algorithms</p>
     <a href="https://github.com/cslab-ntua/flurm" target="_blank" class="tool-link">Learn more →</a>
-  </div>
-  
-  <div class="tool-card">
-    <div class="tool-icon">💡</div>
-    <h3>Tool3</h3>
-    <p>Description</p>
   </div>
 </div>
 
@@ -349,10 +342,10 @@ classes: wide
   </div>
   <div class="contact-card">
     <div class="contact-icon"></div>
-    <h3>Someone else</h3>
+    <h3>Kostis Katsikopoulos</h3>
     <div class="contact-role">Researcher</div>
     <div class="contact-email">
-      <a href="mailto:kkats@cslab.ece.ntua.gr">mail@cslab.ece.ntua.gr</a>
+      <a href="mailto:kkats@cslab.ece.ntua.gr">kkats@cslab.ece.ntua.gr</a>
     </div>
   </div>
 </div>
@@ -362,18 +355,18 @@ classes: wide
 <div class="theses-grid">
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 1"</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">Co-scheduling algorithms for HPC applications</a>
     </div>
-    <div class="thesis-author">Student Name 1</div>
-    <div class="thesis-date">2024</div>
+    <div class="thesis-author">Myrsini Kellari</div>
+    <div class="thesis-date">2025</div>
   </div>
   
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 2"</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/18315" target="_blank">Implementation of a virtual resource manager for MPI applications in high-performance computing (HPC) systems</a>
     </div>
-    <div class="thesis-author">Student Name 2</div>
-    <div class="thesis-date">2023</div>
+    <div class="thesis-author">Alexios Papavasileiou</div>
+    <div class="thesis-date">2022</div>
   </div>
 </div>
 

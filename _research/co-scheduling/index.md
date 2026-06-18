@@ -88,11 +88,11 @@ Studies show that co-execution, i.e., running different applications simultaneou
 <div class="research-directions-grid">
   
   <div class="research-card">
-    <h2>1st Direction</h2>
+    <h2>Co-Scheduling Algorithms</h2>
     <p>
-        Description
+        Designing new algorithms for smarter co-scheduling of jobs with the intent to minimize straggler effects or take advantage of job speedup predictions
     </p>
-    <a href="{{ '/research/coscheduling/firstdirection/' | relative_url }}" class="btn">Learn more →</a>
+    <a href="{{ '/research/coscheduling/algorithms/' | relative_url }}" class="btn">Learn more →</a>
   </div>
 
   <div class="research-card">
