@@ -1,6 +1,6 @@
 ---
-title: "ELiSE Extensions"
-permalink: /research/coscheduling/elise_extensions/
+title: "Flux Extensions"
+permalink: /research/coscheduling/flux/
 layout: single
 classes: wide
 ---
@@ -297,27 +297,49 @@ classes: wide
 
 <div class="research-description">
   <p>
-    The current version of the ELiSE tool supports co-scheduling only at the half-socket level. The objective of this project is to extend its functionality so that researchers can design and implement algorithms for quarter-socket co-scheduling. Other potential extensions to the tool may also be needed as research in co-scheduling and moldability advances. 
+    The objective of this work is to extend the Flux next-generation resource manager, by introducing advanced co-scheduling capabilities such as quarter-level colocation and flexible job placement ordering within compute nodes or moldability-related capabilities.
   </p>
 </div>
 
 <h2>🏷️ Keywords</h2>
 
 <div class="keywords">
+  <span class="keyword">Flux Resource Manager</span>
   <span class="keyword">Co-Scheduling</span>
-  <span class="keyword">Half-Socket allocation</span>
-  <span class="keyword">Quarter-Socket allocation</span>
-  <span class="keyword">HPC Scheduling Simulation</span>
+  <span class="keyword">Moldability</span>
+  <span class="keyword">SLURM Workload Manager</span>
 </div>
 
 <h2>🛠️ Tools & Development Environments</h2>
 
 <div class="tools-grid">
+
+  <div class="tool-icon">🖥️</div>
+    <h3>Flux Framework</h3>
+    <p>A modern, flexible next-generation resource manager and job scheduler that enables hierarchical and fine-grained resource management.</p>
+    <a href="https://flux-framework.org/" target="_blank" class="tool-link">Learn more →</a>
+  </div>
+
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
-    <h3>ELiSE Emulator</h3>
-    <p>Custom Python (co-)scheduling emulator</p>
-    <a href="https://github.com/cslab-ntua/elise" target="_blank" class="tool-link">Learn more →</a>
+    <h3>Flurm Framework</h3>
+    <p>Custom tool to submit the Flux RJMS as a standard batch job to the Slurm RJMS so as to test scheduling algorithms</p>
+    <a href="https://github.com/cslab-ntua/flurm" target="_blank" class="tool-link">Learn more →</a>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🖥️</div>
+    <h3>SLURM Workload Manager</h3>
+    <p>The most widely used software for job scheduling and resource management in the largest supercomputers.</p>
+    <a href="https://slurm.schedmd.com/" target="_blank" class="tool-link">Learn more →</a>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🖥️</div>
+    <h3>Dockerized SLURM</h3>
+    <p>A dockerized version of SLURM used as a test environment.</p>
+    <a href="https://github.com/nikosT/slurm-docker-cluster" target="_blank" class="tool-link">Learn more →</a>
+    <a href="https://www.youtube.com/watch?v=zC3QujEAPok" target="_blank" class="tool-link">Video Tutorial →</a>
   </div>
 </div>
 
@@ -340,25 +362,41 @@ classes: wide
       <a href="mailto:kkats@cslab.ece.ntua.gr">kkats@cslab.ece.ntua.gr</a>
     </div>
   </div>
+    <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>Thanos Tsoukleidis-Karydakis</h3>
+    <div class="contact-role">PhD Candidate</div>
+    <div class="contact-email">
+      <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
+    </div>
+  </div>
 </div>
 
 <h2>📜 Relevant Completed Diploma Theses</h2>
 
 <div class="theses-grid">
+
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">Co-scheduling algorithms for HPC applications</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19879" target="_blank">Flurm - Dynamic Flux Deployment Through Slurm Job Submission with Co-Scheduling Capabilities</a>
     </div>
-    <div class="thesis-author">Myrsini Kellari</div>
+    <div class="thesis-author">Konstantinos Katsikopoulos</div>
     <div class="thesis-date">2025</div>
   </div>
-  
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">Experiences in Deploying Ephemeral Slurm as a Slurm Job and Co-execution Analysis using ¼-socket CPU Allocation</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/18315" target="_blank">Implementation of a virtual resource manager for MPI applications in high-performance computing (HPC) systems</a>
     </div>
-    <div class="thesis-author">Epameinondas Floros</div>
-    <div class="thesis-date">2025</div>
+    <div class="thesis-author">Alexios Papavasileiou</div>
+    <div class="thesis-date">2022</div>
+  </div>
+
+  <div class="thesis-card">
+    <div class="thesis-title">
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/17399" target="_blank">Study and implementation of scheduling algorithms in a job scheduler.</a>
+    </div>
+    <div class="thesis-author">Alexandros Yialidis</div>
+    <div class="thesis-date">2019</div>
   </div>
 </div>
 
@@ -367,13 +405,25 @@ classes: wide
 <ul class="bibliography">
   <li>
     <div class="bib-authors">
-      Karapanagiotis, E., Triantafyllis, N., Tsoukleidis-Karydakis, A., Goumas, G., &amp; Koziris, N.
+      Ahn, Dong H., et al.
     </div>
     <div class="bib-title">
-      "ELiSE: A Tool to Support Algorithmic Design for HPC Co-scheduling."
+      "Flux: A Next-Generation Resource Management Framework for Large HPC Centers."
     </div>
     <div class="bib-venue">
-      Workshop on Job Scheduling Strategies for Parallel Processing, pp. 306–326, Cham: Springer Nature Switzerland, July 2025.
+      2014 43rd International Conference on Parallel Processing Workshops, IEEE, 2014.
+    </div>
+  </li>
+
+  <li>
+    <div class="bib-authors">
+      Yoo, Andy B., Jette, Morris A., &amp; Grondona, Mark
+    </div>
+    <div class="bib-title">
+      "Slurm: Simple Linux Utility for Resource Management."
+    </div>
+    <div class="bib-venue">
+      Workshop on Job Scheduling Strategies for Parallel Processing, Springer Berlin Heidelberg, 2003.
     </div>
   </li>
 
@@ -386,30 +436,6 @@ classes: wide
     </div>
     <div class="bib-venue">
       Concurrency and Computation: Practice and Experience, Vol. 28, No. 2, pp. 232–251, 2016.
-    </div>
-  </li>
-
-  <li>
-    <div class="bib-authors">
-      Blanche, A. D., &amp; Lundqvist, T.
-    </div>
-    <div class="bib-title">
-      "Terrible Twins: A Simple Scheme to Avoid Bad Co-schedules."
-    </div>
-    <div class="bib-venue">
-      Proceedings of the 1st COSH Workshop on Co-Scheduling of HPC Applications, p. 25, 2016.
-    </div>
-  </li>
-
-  <li>
-    <div class="bib-authors">
-      Zacarias, F. V., Petrucci, V., Nishtala, R., Carpenter, P., &amp; Mossé, D.
-    </div>
-    <div class="bib-title">
-      "Intelligent Colocation of HPC Workloads."
-    </div>
-    <div class="bib-venue">
-      Journal of Parallel and Distributed Computing, Vol. 151, pp. 125–137, 2021.
     </div>
   </li>
 </ul>

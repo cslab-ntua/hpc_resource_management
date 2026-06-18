@@ -96,7 +96,7 @@ Studies show that co-execution, i.e., running different applications simultaneou
   </div>
 
   <div class="research-card">
-    <h2>ELiSE extensions</h2>
+    <h2>ELiSE Extensions</h2>
     <p>
         Extend the ELiSE emulator with new features, such as quarter-socket allocation for co-scheduling
     </p>
@@ -109,5 +109,13 @@ Studies show that co-execution, i.e., running different applications simultaneou
         Predict the behavior of an application under co-location with analytical or ML methods
     </p>
     <a href="{{ '/research/coscheduling/modeling/' | relative_url }}" class="btn">Learn more →</a>
+  </div>
+
+  <div class="research-card">
+    <h2>Flux Extensions</h2>
+    <p>
+        Extend the Flux next-generation resource manager with new features
+    </p>
+    <a href="{{ '/research/coscheduling/flux/' | relative_url }}" class="btn">Learn more →</a>
   </div>
 </div>
