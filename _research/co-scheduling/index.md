@@ -118,4 +118,12 @@ Studies show that co-execution, i.e., running different applications simultaneou
     </p>
     <a href="{{ '/research/coscheduling/flux/' | relative_url }}" class="btn">Learn more →</a>
   </div>
+
+  <div class="research-card">
+    <h2>Quarter-Socket Co-Scheduling in a real supercomputer</h2>
+    <p>
+        Study the quarter-socket co-location of MPI applications in a real HPC system
+    </p>
+    <a href="{{ '/research/coscheduling/quarter/' | relative_url }}" class="btn">Learn more →</a>
+  </div>
 </div>
