@@ -1,6 +1,6 @@
 ---
 title: "First Direction"
-permalink: /research/coscheduling/firstdirection/
+permalink: /research/coscheduling/algorithms/
 layout: single
 classes: wide
 ---
