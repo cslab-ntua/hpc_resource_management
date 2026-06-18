@@ -1,5 +1,5 @@
 ---
-title: "First Direction"
+title: "Co-Scheduling Algorithms"
 permalink: /research/coscheduling/algorithms/
 layout: single
 classes: wide
@@ -374,29 +374,51 @@ classes: wide
 
 <ul class="bibliography">
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Karapanagiotis, E., Triantafyllis, N., Tsoukleidis-Karydakis, A., Goumas, G., &amp; Koziris, N.
+    </div>
+    <div class="bib-title">
+      "ELiSE: A Tool to Support Algorithmic Design for HPC Co-scheduling."
+    </div>
+    <div class="bib-venue">
+      Workshop on Job Scheduling Strategies for Parallel Processing, pp. 306–326, Cham: Springer Nature Switzerland, July 2025.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Breslow, A. D., Porter, L., Tiwari, A., Laurenzano, M., Carrington, L., Tullsen, D. M., &amp; Snavely, A. E.
+    </div>
+    <div class="bib-title">
+      "The Case for Colocation of High Performance Computing Workloads."
+    </div>
+    <div class="bib-venue">
+      Concurrency and Computation: Practice and Experience, Vol. 28, No. 2, pp. 232–251, 2016.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Blanche, A. D., &amp; Lundqvist, T.
+    </div>
+    <div class="bib-title">
+      "Terrible Twins: A Simple Scheme to Avoid Bad Co-schedules."
+    </div>
+    <div class="bib-venue">
+      Proceedings of the 1st COSH Workshop on Co-Scheduling of HPC Applications, p. 25, 2016.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
-  </li>
-  <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Zacarias, F. V., Petrucci, V., Nishtala, R., Carpenter, P., &amp; Mossé, D.
+    </div>
+    <div class="bib-title">
+      "Intelligent Colocation of HPC Workloads."
+    </div>
+    <div class="bib-venue">
+      Journal of Parallel and Distributed Computing, Vol. 151, pp. 125–137, 2021.
+    </div>
   </li>
 </ul>
 

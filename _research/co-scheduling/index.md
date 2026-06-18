@@ -96,18 +96,18 @@ Studies show that co-execution, i.e., running different applications simultaneou
   </div>
 
   <div class="research-card">
-    <h2>2nd Direction</h2>
+    <h2>ELiSE extensions</h2>
     <p>
-        Description
+        Extend the ELiSE emulator with new features, such as quarter-socket allocation for co-scheduling
     </p>
-    <a href="{{ '/research/coscheduling/seconddirection/' | relative_url }}" class="btn">Learn more →</a>
+    <a href="{{ '/research/coscheduling/elise_extensions/' | relative_url }}" class="btn">Learn more →</a>
   </div>
 
   <div class="research-card">
-    <h2>3rd Direction</h2>
+    <h2>Co-Location Behavior Prediction</h2>
     <p>
-        Description
+        Predict the behavior of an application under co-location with analytical or ML methods
     </p>
-    <a href="{{ '/research/coscheduling/thirddirection/' | relative_url }}" class="btn">Learn more →</a>
+    <a href="{{ '/research/coscheduling/modeling/' | relative_url }}" class="btn">Learn more →</a>
   </div>
 </div>

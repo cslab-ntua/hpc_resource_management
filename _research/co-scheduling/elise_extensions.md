@@ -1,6 +1,6 @@
 ---
-title: "Third Direction"
-permalink: /research/coscheduling/thirddirection/
+title: "ELiSE extensions"
+permalink: /research/coscheduling/elise_extensions/
 layout: single
 classes: wide
 ---
@@ -297,19 +297,17 @@ classes: wide
 
 <div class="research-description">
   <p>
-    Description
+    The current version of the ELiSE tool supports co-scheduling only at the half-socket level. The objective of this project is to extend its functionality so that researchers can design and implement algorithms for quarter-socket co-scheduling. Other potential extensions to the tool may also be needed as research in co-scheduling and moldability advances. 
   </p>
 </div>
 
 <h2>🏷️ Keywords</h2>
 
 <div class="keywords">
-  <span class="keyword">Keyword1</span>
-  <span class="keyword">Keyword2</span>
-  <span class="keyword">Keyword3</span>
-  <span class="keyword">Keyword4</span>
-  <span class="keyword">Keyword5</span>
-  <span class="keyword">Keyword6</span>
+  <span class="keyword">Co-Scheduling</span>
+  <span class="keyword">Half-Socket allocation</span>
+  <span class="keyword">Quarter-Socket allocation</span>
+  <span class="keyword">HPC Scheduling Simulation</span>
 </div>
 
 <h2>🛠️ Tools & Development Environments</h2>
@@ -317,22 +315,9 @@ classes: wide
 <div class="tools-grid">
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
-    <h3>Tool1</h3>
-    <p>Description</p>
+    <h3>ELiSE Emulator</h3>
+    <p>Custom Python (co-)scheduling emulator</p>
     <a href="https://github.com/cslab-ntua/elise" target="_blank" class="tool-link">Learn more →</a>
-  </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">🖥️</div>
-    <h3>Tool2</h3>
-    <p>Description</p>
-    <a href="https://github.com/cslab-ntua/flurm" target="_blank" class="tool-link">Learn more →</a>
-  </div>
-  
-  <div class="tool-card">
-    <div class="tool-icon">💡</div>
-    <h3>Tool3</h3>
-    <p>Description</p>
   </div>
 </div>
 
@@ -349,10 +334,10 @@ classes: wide
   </div>
   <div class="contact-card">
     <div class="contact-icon"></div>
-    <h3>Someone else</h3>
+    <h3>Kostis Katsikopoulos</h3>
     <div class="contact-role">Researcher</div>
     <div class="contact-email">
-      <a href="mailto:kkats@cslab.ece.ntua.gr">mail@cslab.ece.ntua.gr</a>
+      <a href="mailto:kkats@cslab.ece.ntua.gr">kkats@cslab.ece.ntua.gr</a>
     </div>
   </div>
 </div>
@@ -362,18 +347,18 @@ classes: wide
 <div class="theses-grid">
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 1"</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">Co-scheduling algorithms for HPC applications</a>
     </div>
-    <div class="thesis-author">Student Name 1</div>
-    <div class="thesis-date">2024</div>
+    <div class="thesis-author">Myrsini Kellari</div>
+    <div class="thesis-date">2025</div>
   </div>
   
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 2"</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">Experiences in Deploying Ephemeral Slurm as a Slurm Job and Co-execution Analysis using ¼-socket CPU Allocation</a>
     </div>
-    <div class="thesis-author">Student Name 2</div>
-    <div class="thesis-date">2023</div>
+    <div class="thesis-author">Epameinondas Floros</div>
+    <div class="thesis-date">2025</div>
   </div>
 </div>
 
@@ -381,29 +366,51 @@ classes: wide
 
 <ul class="bibliography">
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Karapanagiotis, E., Triantafyllis, N., Tsoukleidis-Karydakis, A., Goumas, G., &amp; Koziris, N.
+    </div>
+    <div class="bib-title">
+      "ELiSE: A Tool to Support Algorithmic Design for HPC Co-scheduling."
+    </div>
+    <div class="bib-venue">
+      Workshop on Job Scheduling Strategies for Parallel Processing, pp. 306–326, Cham: Springer Nature Switzerland, July 2025.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Breslow, A. D., Porter, L., Tiwari, A., Laurenzano, M., Carrington, L., Tullsen, D. M., &amp; Snavely, A. E.
+    </div>
+    <div class="bib-title">
+      "The Case for Colocation of High Performance Computing Workloads."
+    </div>
+    <div class="bib-venue">
+      Concurrency and Computation: Practice and Experience, Vol. 28, No. 2, pp. 232–251, 2016.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Blanche, A. D., &amp; Lundqvist, T.
+    </div>
+    <div class="bib-title">
+      "Terrible Twins: A Simple Scheme to Avoid Bad Co-schedules."
+    </div>
+    <div class="bib-venue">
+      Proceedings of the 1st COSH Workshop on Co-Scheduling of HPC Applications, p. 25, 2016.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
-  </li>
-  <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Zacarias, F. V., Petrucci, V., Nishtala, R., Carpenter, P., &amp; Mossé, D.
+    </div>
+    <div class="bib-title">
+      "Intelligent Colocation of HPC Workloads."
+    </div>
+    <div class="bib-venue">
+      Journal of Parallel and Distributed Computing, Vol. 151, pp. 125–137, 2021.
+    </div>
   </li>
 </ul>
 

@@ -1,6 +1,6 @@
 ---
-title: "Second Direction"
-permalink: /research/coscheduling/seconddirection/
+title: "Co-Location Behavior Prediction"
+permalink: /research/coscheduling/modeling/
 layout: single
 classes: wide
 ---
@@ -297,19 +297,19 @@ classes: wide
 
 <div class="research-description">
   <p>
-    Description
+    Development of a methodology for predicting the speedup or slowdown of applications during co-scheduling. This includes either the prediction of performance in the presence of a known “neighbor” on the same node, or a broader characterization of the application’s suitability for co-execution. The prediction models will be based on performance counters and communication statistics, obtained from popular HPC benchmarks through the use of profiling tools. The developed can either be analytical or ML-based.
   </p>
 </div>
 
 <h2>🏷️ Keywords</h2>
 
 <div class="keywords">
-  <span class="keyword">Keyword1</span>
-  <span class="keyword">Keyword2</span>
-  <span class="keyword">Keyword3</span>
-  <span class="keyword">Keyword4</span>
-  <span class="keyword">Keyword5</span>
-  <span class="keyword">Keyword6</span>
+  <span class="keyword">Co-Location</span>
+  <span class="keyword">Machine Learning</span>
+  <span class="keyword">Performance Modeling</span>
+  <span class="keyword">Roofline Model</span>
+  <span class="keyword">Profiling</span>
+  <span class="keyword">Performance Counters</span>
 </div>
 
 <h2>🛠️ Tools & Development Environments</h2>
@@ -317,42 +317,53 @@ classes: wide
 <div class="tools-grid">
   <div class="tool-card">
     <div class="tool-icon">🖥️</div>
-    <h3>Tool1</h3>
-    <p>Description</p>
-    <a href="https://github.com/cslab-ntua/elise" target="_blank" class="tool-link">Learn more →</a>
-  </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">🖥️</div>
-    <h3>Tool2</h3>
-    <p>Description</p>
-    <a href="https://github.com/cslab-ntua/flurm" target="_blank" class="tool-link">Learn more →</a>
+    <h3>ARIS Supercomputer</h3>
+    <p>Greek National HPC system operated by GRNET</p>
+    <a href="https://doc.aris.grnet.gr/" target="_blank" class="tool-link">Learn more →</a>
   </div>
   
   <div class="tool-card">
     <div class="tool-icon">💡</div>
-    <h3>Tool3</h3>
-    <p>Description</p>
+    <h3>Machine Learning models</h3>
+    <p>Develop analytical or machine learning job scalability prediction models</p>
+  </div>
+  
+  <div class="tool-card">
+    <div class="tool-icon">📊</div>
+    <h3>Performance Profiling Tools</h3>
+    <p>Tools for collecting performance counters and resource usage data</p>
+    <div style="margin-top: 1rem;">
+      <strong>Tools:</strong>
+      <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+        <li><a href="https://perfwiki.github.io/main/" target="_blank" style="color: var(--link-color);">perf tool</a></li>
+        <li><a href="https://github.com/llnl/mpiP" target="_blank" style="color: var(--link-color);">mpiP tool</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🔧</div>
+    <h3>Benchmark Suites</h3>
+    <p>Standard and synthetic benchmarks for scalability evaluation</p>
+    <div style="margin-top: 1rem;">
+      <strong>Suites:</strong>
+      <ul style="margin: 0.5rem 0 0 1rem; padding: 0;">
+        <li><a href="https://www.nas.nasa.gov/software/npb.html" target="_blank" style="color: var(--link-color);">NAS Parallel Benchmarks</a></li>
+        <li><a href="https://www.spec.org/hpc2021/" target="_blank" style="color: var(--link-color);">SPEC Benchmarks</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <h2>👥 Contact</h2>
 
 <div class="contact-grid">
-  <div class="contact-card">
+    <div class="contact-card">
     <div class="contact-icon"></div>
-    <h3>Nikos Triantafyllis</h3>
+    <h3>Thanos Tsoukleidis-Karydakis</h3>
     <div class="contact-role">PhD Candidate</div>
     <div class="contact-email">
-      <a href="mailto:ntriantafyl@cslab.ece.ntua.gr">ntriantafyl@cslab.ece.ntua.gr</a>
-    </div>
-  </div>
-  <div class="contact-card">
-    <div class="contact-icon"></div>
-    <h3>Someone else</h3>
-    <div class="contact-role">Researcher</div>
-    <div class="contact-email">
-      <a href="mailto:kkats@cslab.ece.ntua.gr">mail@cslab.ece.ntua.gr</a>
+      <a href="mailto:ttsoukl@cslab.ece.ntua.gr">ttsoukl@cslab.ece.ntua.gr</a>
     </div>
   </div>
 </div>
@@ -362,48 +373,49 @@ classes: wide
 <div class="theses-grid">
   <div class="thesis-card">
     <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 1"</a>
+      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19501" target="_blank">Performance Modeling for Co-Scheduling in HPC Systems</a>
     </div>
-    <div class="thesis-author">Student Name 1</div>
-    <div class="thesis-date">2024</div>
-  </div>
-  
-  <div class="thesis-card">
-    <div class="thesis-title">
-      <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19554" target="_blank">"Thesis Title 2"</a>
-    </div>
-    <div class="thesis-author">Student Name 2</div>
-    <div class="thesis-date">2023</div>
+    <div class="thesis-author">Athanasios Tsoukleidis-Karydakis</div>
+    <div class="thesis-date">2025</div>
   </div>
 </div>
 
 <h2>📚 Bibliography</h2>
 
 <ul class="bibliography">
-  <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+   <li>
+    <div class="bib-authors">
+      Tsoukleidis-Karydakis, A., Karapanagiotis, E., Triantafyllis, N., Koziris, N., &amp; Goumas, G.
+    </div>
+    <div class="bib-title">
+      "Performance Models to Support HPC Co-scheduling."
+    </div>
+    <div class="bib-venue">
+      Workshop on Job Scheduling Strategies for Parallel Processing, pp. 284–305, Cham: Springer Nature Switzerland, July 2025.
+    </div>
   </li>
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Blanche, A. D., &amp; Lundqvist, T.
+    </div>
+    <div class="bib-title">
+      "Terrible Twins: A Simple Scheme to Avoid Bad Co-schedules."
+    </div>
+    <div class="bib-venue">
+      Proceedings of the 1st COSH Workshop on Co-Scheduling of HPC Applications, p. 25, 2016.
+    </div>
   </li>
+
   <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
-  </li>
-  <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
-  </li>
-  <li>
-    <div class="bib-authors">Authors</div>
-    <div class="bib-title">"Title"</div>
-    <div class="bib-venue">Venue</div>
+    <div class="bib-authors">
+      Zacarias, F. V., Petrucci, V., Nishtala, R., Carpenter, P., &amp; Mossé, D.
+    </div>
+    <div class="bib-title">
+      "Intelligent Colocation of HPC Workloads."
+    </div>
+    <div class="bib-venue">
+      Journal of Parallel and Distributed Computing, Vol. 151, pp. 125–137, 2021.
+    </div>
   </li>
 </ul>
 
